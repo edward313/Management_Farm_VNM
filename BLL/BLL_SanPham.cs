@@ -25,5 +25,8 @@ namespace BLL
             DataTable table = a.ExecuteQueryDataSet("SanPham_DonGia", CommandType.StoredProcedure, new SqlParameter("@MaSanPham", SanPham));
             return table;
         }
+
+
+
     }
 }

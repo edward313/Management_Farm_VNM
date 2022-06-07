@@ -25,6 +25,12 @@ namespace BLL
             a.MyExecuteNonQuery("insertNPP", CommandType.StoredProcedure, new SqlParameter("@MaNPP", MaNPP), new SqlParameter("@TenNPP", TenNPP), new SqlParameter("@Diachi", Diachi), new SqlParameter("@SDT", SDT), new SqlParameter("@MaTk", MaTK));
         }
 
+        public void EditNPP(string MaNPP, string TenNPP, string Diachi, string SDT, string MaTK)
+        {
+            a.MyExecuteNonQuery("EditNPP", CommandType.StoredProcedure, new SqlParameter("@MaNPP", MaNPP), new SqlParameter("@TenNPP", TenNPP), new SqlParameter("@Diachi", Diachi), new SqlParameter("@SDT", SDT), new SqlParameter("@MaTk", MaTK));
+        }
+
+
 
         public void deleteNPP(string MaNPP)
         {

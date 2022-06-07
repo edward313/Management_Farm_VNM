@@ -73,7 +73,7 @@ namespace QUANLITRANGTRAIVINAMILK
                 {
                     BLL_TrangTrai a = new BLL_TrangTrai();
                     string maNT = this.txt_maNT.Text.Trim();
-                    a.deleteNPP(maNT);
+                    //a.deleteNT(maNT);
                     Loaddata();
                     MessageBox.Show("Xóa thành công nhà trạng trại ", "Thông báo");
 

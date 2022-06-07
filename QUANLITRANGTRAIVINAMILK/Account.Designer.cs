@@ -167,7 +167,7 @@ namespace QUANLITRANGTRAIVINAMILK
             // btn_menu
             // 
             this.btn_menu.BackColor = System.Drawing.Color.SandyBrown;
-            this.btn_menu.Location = new System.Drawing.Point(276, 61);
+            this.btn_menu.Location = new System.Drawing.Point(147, 33);
             this.btn_menu.Name = "btn_menu";
             this.btn_menu.Size = new System.Drawing.Size(89, 40);
             this.btn_menu.TabIndex = 10;
