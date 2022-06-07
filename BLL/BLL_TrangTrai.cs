@@ -20,15 +20,15 @@ namespace BLL
         }
 
 
-        public void addNongtrai(string MaNT, string TenNT, string ChuSoHuu, string diachi, string SDT, string maTK)
+        public void addTrangtrai(string MaNT, string TenNT, string ChuSoHuu, string diachi, string SDT, string maTK)
         {
             a.MyExecuteNonQuery("insertNT", CommandType.StoredProcedure, new SqlParameter("@MaNT", MaNT), new SqlParameter("@TenNT", TenNT), new SqlParameter("@ChuSoHuu", ChuSoHuu), new SqlParameter("@diachi", diachi), new SqlParameter("@SDT", SDT), new SqlParameter("@MaTK", maTK));
         }
-
-        public void addSanPham(string MaSP, string TenSP, string Soluong, string DungTich, string Gia)
+        public void deleteTrangtrai(string MaNT)
         {
-            a.MyExecuteNonQuery("insertNhanVien", CommandType.StoredProcedure, new SqlParameter("@MaNV", MaSP), new SqlParameter("@TenSP", TenSP), new SqlParameter("@SoLuong", Soluong), new SqlParameter("@Dungtich", DungTich), new SqlParameter("@Gia", Gia));
+            a.MyExecuteNonQuery("deleteNT", CommandType.StoredProcedure, new SqlParameter("@MaNT", MaNT));
         }
+
 
 
     }

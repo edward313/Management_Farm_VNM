@@ -124,7 +124,7 @@ CREATE PROC UpdateNV
 )
 AS
 BEGIN	
-	UPDATE dbo.Acccount
+	UPDATE dbo.NhanVien
 	SET  TenNV = @TenNV ,  SoDienThoai = @Sodienthoai , GioiTinh = @GioiTinh,Ngaysinh=@NgaySinh
 
 	WHERE MaNV = @MaNV
@@ -135,4 +135,51 @@ CREATE PROC deleteNV(
 
 ) AS 
 BEGIN DELETE FROM dbo.NhanVien where MaNV = @MaNV
+END
+
+ALTER TABLE NhanVien
+ADD CONSTRAINT nhanvien_pk PRIMARY KEY (MaNV)
+
+ALTER TABLE NhanVien alter column MaNV nvarchar(50) NOT NULL
+
+---------------------SanPham--------------------------------------------
+
+CREATE PROC InsertSP
+(
+						@MaSP nvarchar(50),
+						@TenSP nvarchar(200), 
+						@Gia int,
+						@SoLuong int,
+						@DungTich int
+
+)
+AS
+BEGIN	
+	INSERT INTO dbo.SanPham VALUES (@MaSP, @TenSP,@Gia, @SoLuong,@DungTich)
+END
+
+CREATE PROC UpdateSP
+(
+						@MaSP nvarchar(50),
+						@TenSP nvarchar(200), 
+						@Gia int,
+						@SoLuong int,
+						@DungTich int
+						
+
+
+)
+AS
+BEGIN	
+	UPDATE dbo.SanPham
+	SET  TenSanPham = @TenSP , Gia = @Gia , SoLuong = @SoLuong ,Dungtich=@DungTich
+
+	WHERE MaSp = @MaSP
+END
+
+CREATE PROC deleteSP(
+				@MaSP nvarchar(50)
+
+) AS 
+BEGIN DELETE FROM dbo.SanPham where MaSp = @MaSP
 END

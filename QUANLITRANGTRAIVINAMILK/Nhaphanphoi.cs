@@ -26,10 +26,7 @@ namespace QUANLITRANGTRAIVINAMILK
             DataTable np = NP.DSNhaPhanPhoi();
             dgv_nhaphanphoi.DataSource = np;
         }
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void Nhaphanphoi_Load(object sender, EventArgs e)
         {

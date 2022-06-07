@@ -23,13 +23,13 @@ namespace BLL
 
         public void addNhanVien(string MaNV, string TenNV, string SDT, string GioiTinh, DateTime NgaySinh)
         {
-            a.MyExecuteNonQuery("InsertNV", CommandType.StoredProcedure, new SqlParameter("@MaNV", MaNV), new SqlParameter("@TenNV", MaNV), new SqlParameter("@SDT", SDT), new SqlParameter("@GioiTinh", GioiTinh), new SqlParameter("@NgaySinh", NgaySinh));
+            a.MyExecuteNonQuery("InsertNV", CommandType.StoredProcedure, new SqlParameter("@MaNV", MaNV), new SqlParameter("@TenNV", MaNV), new SqlParameter("@Sodienthoai", SDT), new SqlParameter("@GioiTinh", GioiTinh), new SqlParameter("@NgaySinh", NgaySinh));
         }
 
 
         public void updateNhanVien(string MaNV, string TenNV, string SDT, string GioiTinh, DateTime NgaySinh)
         {
-            a.MyExecuteNonQuery("UpdateNV", CommandType.StoredProcedure, new SqlParameter("@MaNV", MaNV), new SqlParameter("@TenNV", TenNV), new SqlParameter("@SDT", SDT), new SqlParameter("@GioiTinh", GioiTinh), new SqlParameter("@NgaySinh", NgaySinh));
+            a.MyExecuteNonQuery("UpdateNV", CommandType.StoredProcedure, new SqlParameter("@MaNV", MaNV), new SqlParameter("@TenNV", TenNV), new SqlParameter("@Sodienthoai", SDT), new SqlParameter("@GioiTinh", GioiTinh), new SqlParameter("@NgaySinh", NgaySinh));
         }
 
 

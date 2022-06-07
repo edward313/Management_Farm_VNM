@@ -27,7 +27,13 @@ namespace QUANLITRANGTRAIVINAMILK
         }
         private void dgv_NhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            dgv_NhanVien.CurrentCell.Selected = true;
+            txt_MaNV.Text = dgv_NhanVien.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txt_tenNV.Text = dgv_NhanVien.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txt_GT.Text = dgv_NhanVien.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txt_SDT.Text = dgv_NhanVien.Rows[e.RowIndex].Cells[3].Value.ToString();
+            dtp_ngaysinh.Text = dgv_NhanVien.Rows[e.RowIndex].Cells[4].Value.ToString();
+            
         }
 
         private void btn_quaylai_Click(object sender, EventArgs e)
@@ -47,11 +53,7 @@ namespace QUANLITRANGTRAIVINAMILK
 
         }
 
-        private void fontDialog1_Apply(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn xóa trang trại này không ", "Thoát", MessageBoxButtons.YesNo);
@@ -70,6 +72,50 @@ namespace QUANLITRANGTRAIVINAMILK
                 {
                     MessageBox.Show("Xóa không thành công nhà trại .\nVui lòng kiểm tra lại "+ ex , "Thông báo" );
                 }
+            }
+        }
+
+       
+
+        private void btn_Them_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                BLL_NhanVien a = new BLL_NhanVien();
+                string MaNV = this.txt_MaNV.Text.Trim();
+                string TenNV = this.txt_tenNV.Text.Trim();
+                string Phone = this.txt_SDT.Text.Trim();
+                DateTime ngaySinh = this.dtp_ngaysinh.Value;
+                string GioiTinh = this.txt_GT.Text.Trim();
+
+                a.addNhanVien(MaNV, TenNV, Phone, GioiTinh, ngaySinh);
+                Loaddata();
+                MessageBox.Show("Thêm thành công", "Thông báo");
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Thêm không thành công.\nVui lòng kiểm tra lại" + ex, "Thông báo");
+            }
+        }
+
+        private void btn_Sua_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                BLL_NhanVien a = new BLL_NhanVien();
+                string MaNV = this.txt_MaNV.Text.Trim();
+                string TenNV = this.txt_tenNV.Text.Trim();
+                string Phone = this.txt_SDT.Text.Trim();
+                DateTime ngaySinh = this.dtp_ngaysinh.Value;
+                string GioiTinh = this.txt_GT.Text.Trim();
+
+                a.updateNhanVien(MaNV, TenNV, Phone, GioiTinh, ngaySinh);
+                Loaddata();
+                MessageBox.Show("Sua thanh cong", "Thông báo");
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Sua không thanh cong" + ex, "Thông báo");
             }
         }
     }

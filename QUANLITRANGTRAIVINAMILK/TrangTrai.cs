@@ -53,7 +53,7 @@ namespace QUANLITRANGTRAIVINAMILK
                 string SDTNT = this.txt_sdt.Text.Trim();
                 string MaTK = this.txt_tk.Text.Trim();
 
-                a.addNongtrai(maNT, TenNT, ChuSoHuu, Diachi, SDTNT, MaTK);
+                a.addTrangtrai(maNT, TenNT, ChuSoHuu, Diachi, SDTNT, MaTK);
                 Loaddata();
                 MessageBox.Show("Thêm thành công", "Thông báo");
             }
@@ -73,7 +73,7 @@ namespace QUANLITRANGTRAIVINAMILK
                 {
                     BLL_TrangTrai a = new BLL_TrangTrai();
                     string maNT = this.txt_maNT.Text.Trim();
-                    //a.deleteNT(maNT);
+                    a.deleteTrangtrai(maNT);
                     Loaddata();
                     MessageBox.Show("Xóa thành công nhà trạng trại ", "Thông báo");
 
