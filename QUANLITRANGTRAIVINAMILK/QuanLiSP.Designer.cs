@@ -90,12 +90,13 @@ namespace QUANLITRANGTRAIVINAMILK
             // 
             // btn_Thêm
             // 
-            this.btn_Thêm.Location = new System.Drawing.Point(72, 630);
+            this.btn_Thêm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Thêm.Location = new System.Drawing.Point(57, 630);
             this.btn_Thêm.Name = "btn_Thêm";
-            this.btn_Thêm.Size = new System.Drawing.Size(75, 23);
+            this.btn_Thêm.Size = new System.Drawing.Size(88, 36);
             this.btn_Thêm.TabIndex = 9;
             this.btn_Thêm.Text = "Thêm";
-            this.btn_Thêm.UseVisualStyleBackColor = true;
+            this.btn_Thêm.UseVisualStyleBackColor = false;
             this.btn_Thêm.Click += new System.EventHandler(this.btn_Thêm_Click);
             // 
             // btn_Sua
@@ -112,7 +113,7 @@ namespace QUANLITRANGTRAIVINAMILK
             // btn_Xoa
             // 
             this.btn_Xoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_Xoa.Location = new System.Drawing.Point(312, 623);
+            this.btn_Xoa.Location = new System.Drawing.Point(312, 630);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(114, 36);
             this.btn_Xoa.TabIndex = 11;
