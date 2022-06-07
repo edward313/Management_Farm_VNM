@@ -80,7 +80,7 @@ namespace QUANLITRANGTRAIVINAMILK
             // btn_quaylai
             // 
             this.btn_quaylai.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_quaylai.Location = new System.Drawing.Point(507, 619);
+            this.btn_quaylai.Location = new System.Drawing.Point(666, 630);
             this.btn_quaylai.Name = "btn_quaylai";
             this.btn_quaylai.Size = new System.Drawing.Size(139, 34);
             this.btn_quaylai.TabIndex = 8;
