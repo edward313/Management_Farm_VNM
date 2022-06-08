@@ -61,9 +61,11 @@ namespace QUANLITRANGTRAIVINAMILK
             this.btn_quaylai = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cb_MaTK = new System.Windows.Forms.ComboBox();
+            this.btn_Sua = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NongTrai)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -344,7 +346,7 @@ namespace QUANLITRANGTRAIVINAMILK
             // btn_Xóa
             // 
             this.btn_Xóa.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_Xóa.Location = new System.Drawing.Point(242, 548);
+            this.btn_Xóa.Location = new System.Drawing.Point(359, 12);
             this.btn_Xóa.Name = "btn_Xóa";
             this.btn_Xóa.Size = new System.Drawing.Size(139, 34);
             this.btn_Xóa.TabIndex = 7;
@@ -366,6 +368,8 @@ namespace QUANLITRANGTRAIVINAMILK
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btn_Sua);
+            this.groupBox3.Controls.Add(this.btn_Xóa);
             this.groupBox3.Location = new System.Drawing.Point(33, 532);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(749, 50);
@@ -381,6 +385,17 @@ namespace QUANLITRANGTRAIVINAMILK
             this.cb_MaTK.Size = new System.Drawing.Size(200, 21);
             this.cb_MaTK.TabIndex = 3;
             // 
+            // btn_Sua
+            // 
+            this.btn_Sua.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_Sua.Location = new System.Drawing.Point(203, 12);
+            this.btn_Sua.Name = "btn_Sua";
+            this.btn_Sua.Size = new System.Drawing.Size(139, 34);
+            this.btn_Sua.TabIndex = 7;
+            this.btn_Sua.Text = "Sua";
+            this.btn_Sua.UseVisualStyleBackColor = false;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
+            // 
             // TrangTrai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -389,7 +404,6 @@ namespace QUANLITRANGTRAIVINAMILK
             this.ClientSize = new System.Drawing.Size(800, 594);
             this.Controls.Add(this.btn_quaylai);
             this.Controls.Add(this.txt_them);
-            this.Controls.Add(this.btn_Xóa);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -401,6 +415,7 @@ namespace QUANLITRANGTRAIVINAMILK
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NongTrai)).EndInit();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -440,5 +455,6 @@ namespace QUANLITRANGTRAIVINAMILK
         private System.Windows.Forms.Button btn_quaylai;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox cb_MaTK;
+        private System.Windows.Forms.Button btn_Sua;
     }
 }

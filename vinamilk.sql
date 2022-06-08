@@ -186,6 +186,8 @@ END
 
 ----------------------------TrangTrai------------------------
 
+------------------------them từ đây ------------------------------
+
   delete from NHAPHANPHOI where MaNPP != '1'
 
   delete from NongTrai where MaNT != '1'
@@ -193,7 +195,7 @@ END
    delete from ChiTietHoaDon where MaHoadon != '1'
    delete from HoaDon where MaHoadon != '1'
 
-----------------------------NPP-----------------------------------------
+----------------------------tạo liên kết-----------------------------------------
 
  ALTER TABLE NHAPHANPHOI
 ADD CONSTRAINT fk_nt_npp
@@ -220,3 +222,44 @@ ADD CONSTRAINT fk_nt_npp
 ADD CONSTRAINT fk_hd_nt
  FOREIGN KEY (MaNongTrai)
  REFERENCES NongTrai (MaNT);
+
+ -----------------------------NPP---------------
+
+  CREATE PROC UpdateNPP
+(
+						@MaNPP nvarchar(50),
+						@TenNPP nvarchar(200), 
+						@Diachi nvarchar(200),
+						@SDTNPP nvarchar(11),
+						@MaTK nvarchar(50)
+						
+
+
+)
+AS
+BEGIN	
+	UPDATE dbo.NHAPHANPHOI
+	SET  MaNPP = @MaNPP , TenNPP = @TenNPP , Diachi = @Diachi ,SDTNPP=@SDTNPP
+
+	WHERE MaNPP = @MaNPP
+END
+
+  CREATE PROC UpdateNT
+(
+						@MaNT nvarchar(50),
+						@TenNT nvarchar(200), 
+						@ChuSoHuu nvarchar(200),
+						@Diachi nvarchar(200),
+						@SDTNT nvarchar(11),
+						@MaTK nvarchar(50)
+						
+
+
+)
+AS
+BEGIN	
+	UPDATE dbo.NongTrai
+	SET  MaNT = @MaNT , TenNT = @TenNT ,ChuSoHuu = @ChuSoHuu, SDTNT=@SDTNT,MaTk =@MaTK
+
+	WHERE MaNT = @MaNT
+END

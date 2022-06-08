@@ -58,6 +58,7 @@ namespace QUANLITRANGTRAIVINAMILK
             this.btn_quaylai = new System.Windows.Forms.Button();
             this.btn_them = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
+            this.btn_Sua = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_nhaphanphoi)).BeginInit();
@@ -312,6 +313,7 @@ namespace QUANLITRANGTRAIVINAMILK
             // 
             this.groupBox3.Controls.Add(this.btn_quaylai);
             this.groupBox3.Controls.Add(this.btn_them);
+            this.groupBox3.Controls.Add(this.btn_Sua);
             this.groupBox3.Controls.Add(this.btn_xoa);
             this.groupBox3.Location = new System.Drawing.Point(33, 595);
             this.groupBox3.Name = "groupBox3";
@@ -345,13 +347,24 @@ namespace QUANLITRANGTRAIVINAMILK
             // btn_xoa
             // 
             this.btn_xoa.BackColor = System.Drawing.Color.Coral;
-            this.btn_xoa.Location = new System.Drawing.Point(178, 19);
+            this.btn_xoa.Location = new System.Drawing.Point(378, 19);
             this.btn_xoa.Name = "btn_xoa";
             this.btn_xoa.Size = new System.Drawing.Size(128, 44);
             this.btn_xoa.TabIndex = 0;
             this.btn_xoa.Text = "XÓA";
             this.btn_xoa.UseVisualStyleBackColor = false;
             this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
+            // 
+            // btn_Sua
+            // 
+            this.btn_Sua.BackColor = System.Drawing.Color.Coral;
+            this.btn_Sua.Location = new System.Drawing.Point(201, 19);
+            this.btn_Sua.Name = "btn_Sua";
+            this.btn_Sua.Size = new System.Drawing.Size(128, 44);
+            this.btn_Sua.TabIndex = 0;
+            this.btn_Sua.Text = "SỬA";
+            this.btn_Sua.UseVisualStyleBackColor = false;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // Nhaphanphoi
             // 
@@ -408,5 +421,6 @@ namespace QUANLITRANGTRAIVINAMILK
         private System.Windows.Forms.Button btn_quaylai;
         protected System.Windows.Forms.Button btn_them;
         private System.Windows.Forms.Button btn_xoa;
+        private System.Windows.Forms.Button btn_Sua;
     }
 }

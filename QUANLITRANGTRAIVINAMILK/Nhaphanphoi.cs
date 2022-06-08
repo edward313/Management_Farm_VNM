@@ -107,5 +107,23 @@ namespace QUANLITRANGTRAIVINAMILK
         {
 
         }
+
+        private void btn_Sua_Click(object sender, EventArgs e)
+        {
+            BLL_NPP a = new BLL_NPP();
+            string maNPP = this.txt_maNPP.Text.Trim();
+            string TenNPP = this.txt_TenNPP.Text.Trim();
+            string Diachi = this.txt_diachi.Text.Trim();
+            string SDTNPP = this.txt_sdt.Text.Trim();
+            string MaTK = this.txt_matk.Text.Trim();
+
+
+
+
+            a.UpdateNPP(maNPP, TenNPP, Diachi, SDTNPP, MaTK);
+            Loaddata();
+
+            MessageBox.Show("Update nhà phân phối thành công", "Thông báo");
+        }
     }
 }

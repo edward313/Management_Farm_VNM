@@ -58,7 +58,7 @@ namespace QUANLITRANGTRAIVINAMILK
                 string ChuSoHuu = this.txt_ChuSoHuu.Text.Trim();
                 string Diachi = this.txt_diachi.Text.Trim();
                 string SDTNT = this.txt_sdt.Text.Trim();
-                string MaTK = this.txt_tk.Text.Trim();
+                string MaTK = this.cb_MaTK.Text.Trim();
 
                 a.addTrangtrai(maNT, TenNT, ChuSoHuu, Diachi, SDTNT, MaTK);
                 Loaddata();
@@ -112,6 +112,28 @@ namespace QUANLITRANGTRAIVINAMILK
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_Sua_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                BLL_TrangTrai a = new BLL_TrangTrai();
+                string maNT = this.txt_maNT.Text.Trim();
+                string TenNT = this.txt_TenNT.Text.Trim();
+                string ChuSoHuu = this.txt_ChuSoHuu.Text.Trim();
+                string Diachi = this.txt_diachi.Text.Trim();
+                string SDTNT = this.txt_sdt.Text.Trim();
+                string MaTK = this.cb_MaTK.Text.Trim();
+
+                a.updateTrangtrai(maNT, TenNT, ChuSoHuu, Diachi, SDTNT, MaTK);
+                Loaddata();
+                MessageBox.Show("Thêm thành công", "Thông báo");
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("Thêm không thành công.\nVui lòng kiểm tra lại", "Thông báo");
+            }
         }
     }
 }

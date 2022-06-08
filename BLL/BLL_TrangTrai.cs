@@ -32,6 +32,11 @@ namespace BLL
             
         }
 
+        public void updateTrangtrai(string MaNT, string TenNT, string ChuSoHuu, string diachi, string SDT, string maTK)
+        {
+            a.MyExecuteNonQuery("UpdateNT", CommandType.StoredProcedure, new SqlParameter("@MaNT", MaNT), new SqlParameter("@TenNT", TenNT), new SqlParameter("@ChuSoHuu", ChuSoHuu), new SqlParameter("@diachi", diachi), new SqlParameter("@SDT", SDT), new SqlParameter("@MaTK", maTK));
+        }
+
 
 
     }
