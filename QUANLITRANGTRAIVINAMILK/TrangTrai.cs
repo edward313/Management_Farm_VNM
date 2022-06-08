@@ -28,6 +28,13 @@ namespace QUANLITRANGTRAIVINAMILK
             BLL_TrangTrai NP = new BLL_TrangTrai();
             DataTable np = NP.DSNongTrai();
             dgv_NongTrai.DataSource = np;
+
+            BLL_ACCOUNT TK = new BLL_ACCOUNT();
+            DataTable tk = TK.DStaiKhoan();
+            cb_MaTK.DataSource = tk;
+            cb_MaTK.ValueMember = "MaTk";
+            cb_MaTK.DisplayMember = "MaTk";
+
         }
 
         private void dgv_NongTrai_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -38,7 +45,7 @@ namespace QUANLITRANGTRAIVINAMILK
             txt_ChuSoHuu.Text = dgv_NongTrai.Rows[e.RowIndex].Cells["ChuSoHuu"].Value.ToString();
             txt_diachi.Text = dgv_NongTrai.Rows[e.RowIndex].Cells["Diachi"].Value.ToString();
             txt_sdt.Text = dgv_NongTrai.Rows[e.RowIndex].Cells["SDT"].Value.ToString();
-            txt_tk.Text = dgv_NongTrai.Rows[e.RowIndex].Cells["MaTk"].Value.ToString();
+            cb_MaTK.Text = dgv_NongTrai.Rows[e.RowIndex].Cells["MaTk"].Value.ToString();
         }
 
         private void txt_them_Click(object sender, EventArgs e)

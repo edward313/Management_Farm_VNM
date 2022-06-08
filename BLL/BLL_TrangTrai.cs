@@ -27,6 +27,9 @@ namespace BLL
         public void deleteTrangtrai(string MaNT)
         {
             a.MyExecuteNonQuery("deleteNT", CommandType.StoredProcedure, new SqlParameter("@MaNT", MaNT));
+
+
+            
         }
 
 

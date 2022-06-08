@@ -36,7 +36,6 @@ namespace QUANLITRANGTRAIVINAMILK
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txt_tk = new System.Windows.Forms.TextBox();
             this.txt_diachi = new System.Windows.Forms.TextBox();
             this.txt_sdt = new System.Windows.Forms.TextBox();
             this.txt_ChuSoHuu = new System.Windows.Forms.TextBox();
@@ -61,6 +60,7 @@ namespace QUANLITRANGTRAIVINAMILK
             this.btn_Xóa = new System.Windows.Forms.Button();
             this.btn_quaylai = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cb_MaTK = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NongTrai)).BeginInit();
@@ -69,13 +69,13 @@ namespace QUANLITRANGTRAIVINAMILK
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.groupBox1.Controls.Add(this.cb_MaTK);
             this.groupBox1.Controls.Add(this.panel6);
             this.groupBox1.Controls.Add(this.panel5);
             this.groupBox1.Controls.Add(this.panel4);
             this.groupBox1.Controls.Add(this.panel3);
             this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Controls.Add(this.txt_tk);
             this.groupBox1.Controls.Add(this.txt_diachi);
             this.groupBox1.Controls.Add(this.txt_sdt);
             this.groupBox1.Controls.Add(this.txt_ChuSoHuu);
@@ -141,16 +141,6 @@ namespace QUANLITRANGTRAIVINAMILK
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 1);
             this.panel1.TabIndex = 2;
-            // 
-            // txt_tk
-            // 
-            this.txt_tk.BackColor = System.Drawing.SystemColors.Control;
-            this.txt_tk.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_tk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tk.Location = new System.Drawing.Point(535, 116);
-            this.txt_tk.Name = "txt_tk";
-            this.txt_tk.Size = new System.Drawing.Size(200, 19);
-            this.txt_tk.TabIndex = 1;
             // 
             // txt_diachi
             // 
@@ -383,6 +373,14 @@ namespace QUANLITRANGTRAIVINAMILK
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chức năng";
             // 
+            // cb_MaTK
+            // 
+            this.cb_MaTK.FormattingEnabled = true;
+            this.cb_MaTK.Location = new System.Drawing.Point(535, 118);
+            this.cb_MaTK.Name = "cb_MaTK";
+            this.cb_MaTK.Size = new System.Drawing.Size(200, 21);
+            this.cb_MaTK.TabIndex = 3;
+            // 
             // TrangTrai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -428,7 +426,6 @@ namespace QUANLITRANGTRAIVINAMILK
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox txt_tk;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgv_NongTrai;
@@ -442,5 +439,6 @@ namespace QUANLITRANGTRAIVINAMILK
         private System.Windows.Forms.Button btn_Xóa;
         private System.Windows.Forms.Button btn_quaylai;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ComboBox cb_MaTK;
     }
 }

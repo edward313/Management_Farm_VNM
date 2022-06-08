@@ -183,3 +183,40 @@ CREATE PROC deleteSP(
 ) AS 
 BEGIN DELETE FROM dbo.SanPham where MaSp = @MaSP
 END
+
+----------------------------TrangTrai------------------------
+
+  delete from NHAPHANPHOI where MaNPP != '1'
+
+  delete from NongTrai where MaNT != '1'
+
+   delete from ChiTietHoaDon where MaHoadon != '1'
+   delete from HoaDon where MaHoadon != '1'
+
+----------------------------NPP-----------------------------------------
+
+ ALTER TABLE NHAPHANPHOI
+ADD CONSTRAINT fk_nt_npp
+ FOREIGN KEY (Matk)
+ REFERENCES Acccount (Matk);
+
+  ALTER TABLE NongTrai
+ADD CONSTRAINT fk_nt_npp
+ FOREIGN KEY (Matk)
+ REFERENCES Acccount (Matk);
+
+  ALTER TABLE NHAPHANPHOI
+ADD CONSTRAINT fk_nt_npp
+ FOREIGN KEY (Matk)
+ REFERENCES Acccount (Matk);
+
+
+   ALTER TABLE HoaDon
+ADD CONSTRAINT fk_nt_npp
+ FOREIGN KEY (MaNPP)
+ REFERENCES NHAPHANPHOI (MaNPP);
+
+     ALTER TABLE HoaDon
+ADD CONSTRAINT fk_hd_nt
+ FOREIGN KEY (MaNongTrai)
+ REFERENCES NongTrai (MaNT);
